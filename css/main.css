@@ -14,9 +14,9 @@
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  -webkit-transition: opacity 0.5s 2s;
-  transition: opacity 0.5s 2s;
-  opacity: 0;
+  -webkit-transition: visibility 0.5s 2s;
+  transition: visibility 0.5s 2s;
+  visibility: hidden;
 }
 
 .loader::after {
