@@ -14,8 +14,8 @@
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  -webkit-transition: opacity 0.5s 20s,visibility 0.5s 20s;
-  transition: opacity 0.5s 20s,visibility 0.5s 20s;
+  -webkit-transition: opacity 0.5s 2s,visibility 0.5s 2s;
+  transition: opacity 0.5s 2s,visibility 0.5s 2s;
 }
 
 .loader--hidden {
