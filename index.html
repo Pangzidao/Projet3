@@ -8,45 +8,49 @@
         <script src="https://kit.fontawesome.com/513c2c7c9c.js" crossorigin="anonymous"></script>
         <title>Projet2</title>
     </head>
+    <body>
+        <div class="loader loader--hidden"></div>
+        
+        <header>
+            <img src="images/logo/ohmyfood.png" alt="Logo de ohmyfood">
+        </header>
+    
+        <section id="section-de-localisation">
+            <form method="post" action="traitement.php">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" name="recherche"  value="Paris, Belleville" autocomplete="off"/>         
+            </form>
+        </section>
+    
+        <section id="section-presentation">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception sélectionnés par nos soins</p>
+            <button type="button">Explorer nos restaurants</button>
+        </section>
+    
+        <section id="section-fonctionnement">
+            <h2>Fonctionnement</h2>
+    
+            <div>
+                <p class="numero-etape">1</p>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p class="texte-etape">Choisissez un restaurant</p>
+            </div>
+    
+            <div>
+                <p class="numero-etape">2</p>
+                <i class="fa-solid fa-list-ul"></i>
+                <p class="texte-etape">Composez votre menu</p>
+            </div>
+    
+            <div>
+                <p class="numero-etape">3</p>
+                <i class="fas fa-store"></i>
+                <p class="texte-etape">Dégustez au restaurant</p>
+            </div>
+    
+        </section>
 
-    <header>
-        <img src="images/logo/ohmyfood.png" alt="Logo de ohmyfood">
-    </header>
-
-    <section id="section-de-localisation">
-        <form method="post" action="traitement.php">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" name="recherche"  value="Paris, Belleville" autocomplete="off"/>         
-        </form>
-    </section>
-
-    <section id="section-presentation">
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception sélectionnés par nos soins</p>
-        <button type="button">Explorer nos restaurants</button>
-    </section>
-
-    <section id="section-fonctionnement">
-        <h2>Fonctionnement</h2>
-
-        <div>
-            <p class="numero-etape">1</p>
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <p class="texte-etape">Choisissez un restaurant</p>
-        </div>
-
-        <div>
-            <p class="numero-etape">2</p>
-            <i class="fa-solid fa-list-ul"></i>
-            <p class="texte-etape">Composez votre menu</p>
-        </div>
-
-        <div>
-            <p class="numero-etape">3</p>
-            <i class="fas fa-store"></i>
-            <p class="texte-etape">Dégustez au restaurant</p>
-        </div>
-
-    </section>
-
+    </body>
+    
 </html>

@@ -2,6 +2,39 @@ $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiare:#99E2D0;
 
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    transition:opacity 0.5s 20s,visibility 0.5s 20s;
+
+    &--hidden{
+        opacity:0;
+        visibility:hidden;
+    }
+    &::after{
+        content:"";
+        width:75px;
+        height:75px;
+        border:15px solid $couleur-primaire;
+        border-top-color: $couleur-secondaire;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+    }
+  
+}
+
+@keyframes loading {
+    from {transform: rotate(0turn);}
+    to {transform: rotate(1turn);}
+}
+
 @font-face {
     font-family: "Raleway";
     src: url(../css/Raleway-VariableFont_wght.ttf);
