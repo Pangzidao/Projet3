@@ -1,4 +1,4 @@
-.loader {
+#loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,12 +14,17 @@
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  -webkit-transition: visibility 0.5s 2s;
-  transition: visibility 0.5s 2s;
+  -webkit-animation-name: dissapear;
+          animation-name: dissapear;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   visibility: hidden;
+  z-index: 5;
 }
 
-.loader::after {
+#loader::after {
   content: "";
   width: 75px;
   height: 75px;
@@ -49,6 +54,24 @@
   to {
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes dissapear {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes dissapear {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
   }
 }
 
@@ -207,5 +230,120 @@ header img {
 
 #section-fonctionnement div .texte-etape {
   font-weight: 500;
+}
+
+#section-restaurants {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-restaurants h2 {
+  padding: 50px 20px 50px 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#section-restaurants .carte {
+  height: 300px;
+  width: 350px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+#section-restaurants .carte .nouveau {
+  background-color: aquamarine;
+  color: green;
+  font-weight: 600;
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+#section-restaurants .carte img {
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#section-restaurants .carte h3, #section-restaurants .carte p {
+  margin: 5px;
+}
+
+#section-restaurants .carte .heart {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+#section-restaurants .carte .heart-border {
+  color: black;
+  position: absolute;
+  font-size: xx-large;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#section-restaurants .carte .heart-content {
+  position: absolute;
+  color: white;
+  font-size: xx-large;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  z-index: 1;
+}
+
+#section-restaurants .carte .heart-content:hover {
+  color: #FF79DA;
+  z-index: 3;
+}
+
+footer {
+  background-color: #404040;
+  height: 180px;
+}
+
+footer img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 100px;
+  margin: 20px 0px 0px 20px;
+}
+
+footer p {
+  margin: 10px 0px 0px 20px;
+  color: white;
+}
+
+footer i {
+  margin-right: 10px;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
