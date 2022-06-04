@@ -268,17 +268,7 @@ footer{
 
 }
 
-@media (min-width:992px){
-
-    header{
-        img{
-            width:300px;
-        }
-    }
-
-    #section-de-localisation{
-        font-size: x-large;
-    }
+@media (min-width:768px){
 
     #section-fonctionnement{
         display: flex;
@@ -293,9 +283,9 @@ footer{
     }
 
     #colonne-gauche{
-        width:500px;
-        min-width: 500px;
-        margin:20px;
+        width:400px;
+        min-width: 400px;
+        margin:20px 10px 20px 20px;
     }
 
     #section-presentation{

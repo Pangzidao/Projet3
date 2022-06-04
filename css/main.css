@@ -374,13 +374,7 @@ footer nav i {
   color: white;
 }
 
-@media (min-width: 992px) {
-  header img {
-    width: 300px;
-  }
-  #section-de-localisation {
-    font-size: x-large;
-  }
+@media (min-width: 768px) {
   #section-fonctionnement {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -401,9 +395,9 @@ footer nav i {
     display: flex;
   }
   #colonne-gauche {
-    width: 500px;
-    min-width: 500px;
-    margin: 20px;
+    width: 400px;
+    min-width: 400px;
+    margin: 20px 10px 20px 20px;
   }
   #section-presentation {
     border-radius: 20px;
