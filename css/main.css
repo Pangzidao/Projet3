@@ -130,7 +130,9 @@ header img {
   border: none;
   background-color: inherit;
   font-weight: 600;
-  width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 20px 0px 20px 10px;
 }
 
@@ -191,7 +193,7 @@ header img {
 }
 
 #section-fonctionnement {
-  margin: 50px 20px 50px 20px;
+  margin: 30px 20px 50px 20px;
 }
 
 #section-fonctionnement div {
@@ -247,7 +249,7 @@ header img {
 }
 
 #section-restaurants h2 {
-  padding: 50px 20px 50px 20px;
+  padding: 20px 20px 50px 20px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -273,6 +275,17 @@ header img {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
+  -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#section-restaurants .carte:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 0px 30px 9px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 0px 30px 9px rgba(0, 0, 0, 0.21);
 }
 
 #section-restaurants .carte .nouveau {
@@ -294,7 +307,7 @@ header img {
 }
 
 #section-restaurants .carte h3, #section-restaurants .carte p {
-  margin: 5px;
+  margin: 5px 0px 0px 10px;
 }
 
 #section-restaurants .carte .heart {
@@ -337,13 +350,111 @@ footer img {
   margin: 20px 0px 0px 20px;
 }
 
-footer p {
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer nav a {
   margin: 10px 0px 0px 20px;
   color: white;
 }
 
-footer i {
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+footer nav i {
   margin-right: 10px;
   color: white;
+}
+
+@media (min-width: 992px) {
+  header img {
+    width: 300px;
+  }
+  #section-de-localisation {
+    font-size: x-large;
+  }
+  #section-fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #section-fonctionnement h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #info-et-restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #colonne-gauche {
+    width: 500px;
+    min-width: 500px;
+    margin: 20px;
+  }
+  #section-presentation {
+    border-radius: 20px;
+  }
+  #section-restaurants {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 20px;
+    border-radius: 20px;
+  }
+  #section-restaurants h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 20px 0px 0px 0px;
+  }
+  #section-restaurants #zone-carte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer img {
+    width: 200px;
+    margin-left: 40px;
+  }
+  footer nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 10px 0px 20px 0px;
+  }
+  footer nav a {
+    font-size: large;
+    margin: 20px 40px 20px 40px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
