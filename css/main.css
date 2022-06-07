@@ -399,7 +399,7 @@ footer nav i {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    min-width: 300px;
+    min-width: 350px;
     margin: 20px 10px 20px 20px;
   }
   #section-presentation {
@@ -448,11 +448,11 @@ footer nav i {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 10px 0px 20px 0px;
+    margin: 10px 0px 10px 20px;
   }
   footer nav a {
     font-size: large;
-    margin: 40px 20px 0px 20px;
+    margin: 20px 15px 0px 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */

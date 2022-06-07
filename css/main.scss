@@ -284,7 +284,7 @@ footer{
 
     #colonne-gauche{
         flex-grow: 1;
-        min-width: 300px;
+        min-width: 350px;
         margin:20px 10px 20px 20px;
     }
 
@@ -321,10 +321,10 @@ footer{
         }
         nav{
             flex-direction: row;       
-            margin:10px 0px 20px 0px;
+            margin:10px 0px 10px 20px;
             a{
                 font-size: large;
-                margin: 40px 20px 0px 20px;
+                margin: 20px 15px 0px 20px;
            
             }
         }
