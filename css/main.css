@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Raleway";
+  src: url(../css/Raleway-VariableFont_wght.ttf);
+  font-weight: 100 1000;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
 #loader {
   position: fixed;
   top: 0;
@@ -20,8 +34,8 @@
           animation-duration: 2s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  visibility: hidden;
   z-index: 5;
+  visibility: hidden;
 }
 
 #loader::after {
@@ -73,20 +87,6 @@
   to {
     visibility: hidden;
   }
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url(../css/Raleway-VariableFont_wght.ttf);
-  font-weight: 100 1000;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: black;
 }
 
 header {
