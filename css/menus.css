@@ -53,7 +53,7 @@ img {
   height: fit-content;
   margin-top: -40px;
   z-index: 2;
-  border-radius: 40px;
+  border-radius: 40px 40px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +61,23 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+#menu #liste-plats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 #menu button {
@@ -122,19 +139,28 @@ img {
   z-index: 3;
 }
 
+#menu .partie-du-repas {
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+}
+
 #menu .partie-du-repas h2 {
   margin: 30px 0px 20px 20px;
   font-size: medium;
   font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #menu .partie-du-repas h2::after {
   content: "";
-  position: absolute;
   height: 2px;
   width: 45px;
-  top: 23px;
-  left: 0px;
   background-color: #99E2D0;
 }
 
@@ -150,33 +176,39 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#menu .partie-du-repas .plat h3, #menu .partie-du-repas .plat p {
+#menu .partie-du-repas .plat .plat-texte {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#menu .partie-du-repas .plat .plat-texte h3, #menu .partie-du-repas .plat .plat-texte p {
   margin-left: 20px;
 }
 
-#menu .partie-du-repas .plat .prix {
+#menu .partie-du-repas .plat .plat-texte .prix {
   font-weight: bold;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 0px;
 }
 
 #menu .partie-du-repas .plat .plat-hover-effect {
   height: 100%;
-  width: 60px;
+  width: 20%;
+  margin-right: -20%;
   background-color: #99E2D0;
-  position: absolute;
-  right: -60px;
-  -webkit-transition: right 1s;
-  transition: right 1s;
+  -webkit-transition: margin-right 0.5s;
+  transition: margin-right 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +233,7 @@ img {
 }
 
 #menu .partie-du-repas .plat:hover .plat-hover-effect {
-  right: 0px;
+  margin-right: 0px;
 }
 
 #menu .partie-du-repas .un {
@@ -375,5 +407,32 @@ footer nav a:hover {
 footer nav i {
   margin-right: 10px;
   color: white;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer img {
+    width: 200px;
+    margin-left: 40px;
+  }
+  footer nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 10px 0px 10px 20px;
+  }
+  footer nav a {
+    font-size: large;
+    margin: 20px 15px 0px 20px;
+  }
 }
 /*# sourceMappingURL=menus.css.map */
