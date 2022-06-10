@@ -41,10 +41,22 @@ header{
     }
 }
 
-img{
-    width: 100%;
-    z-index: 1;
+#image-restaurant{
+    height:300px;
+    display: flex;
+    overflow: hidden;
+
+
+    img{
+        flex-grow:1;
+        height:auto;
+        object-fit: cover;
+       
+    }
+
 }
+
+
 
 #menu{
     background-color: rgb(242, 242, 242);
