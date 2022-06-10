@@ -10,6 +10,7 @@
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: black;
+  margin: 0px;
 }
 
 header {
@@ -24,8 +25,355 @@ header {
           align-items: center;
 }
 
+header a {
+  position: absolute;
+  left: 25px;
+}
+
+header a i {
+  font-weight: bold;
+  font-size: x-large;
+}
+
 header img {
   width: 200px;
   margin: 20px;
+}
+
+img {
+  width: 100%;
+  z-index: 1;
+}
+
+#menu {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -40px;
+  z-index: 2;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#menu button {
+  background-color: #9356DC;
+  padding: 20px;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 40px;
+  color: white;
+  font-weight: 500;
+  margin: 20px 0px 60px 0px;
+  background-color: #9356DC;
+  -webkit-transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
+}
+
+#menu button:hover {
+  background-color: #FF79DA;
+  -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#menu h1 {
+  margin: 30px 0px 50px 20px;
+}
+
+#menu .heart {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+}
+
+#menu .heart-border {
+  color: black;
+  position: absolute;
+  font-size: xx-large;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#menu .heart-content {
+  position: absolute;
+  color: white;
+  font-size: xx-large;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  z-index: 1;
+}
+
+#menu .heart-content:hover {
+  color: #FF79DA;
+  z-index: 3;
+}
+
+#menu .partie-du-repas h2 {
+  margin: 30px 0px 20px 20px;
+  font-size: medium;
+  font-weight: 300;
+}
+
+#menu .partie-du-repas h2::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 45px;
+  top: 23px;
+  left: 0px;
+  background-color: #99E2D0;
+}
+
+#menu .partie-du-repas .plat {
+  height: 70px;
+  width: auto;
+  margin: 20px;
+  background-color: white;
+  border-radius: 15px;
+  visibility: hidden;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#menu .partie-du-repas .plat h3, #menu .partie-du-repas .plat p {
+  margin-left: 20px;
+}
+
+#menu .partie-du-repas .plat .prix {
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#menu .partie-du-repas .plat .plat-hover-effect {
+  height: 100%;
+  width: 60px;
+  background-color: #99E2D0;
+  position: absolute;
+  right: -60px;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu .partie-du-repas .plat .plat-hover-effect i {
+  background-color: white;
+  padding: 4px;
+  border-radius: 50%;
+  color: #99E2D0;
+  font-weight: bold;
+}
+
+#menu .partie-du-repas .plat:hover {
+  cursor: pointer;
+}
+
+#menu .partie-du-repas .plat:hover .plat-hover-effect {
+  right: 0px;
+}
+
+#menu .partie-du-repas .un {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .deux {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .trois {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .quatre {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .cinq {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .six {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .sept {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .huit {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#menu .partie-du-repas .neuf {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes plat {
+  from {
+    visibility: collapse;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes plat {
+  from {
+    visibility: collapse;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+footer {
+  background-color: #404040;
+  height: 180px;
+  z-index: 5;
+  bottom: 0px;
+}
+
+footer img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 100px;
+  margin: 20px 0px 0px 20px;
+}
+
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer nav a {
+  margin: 10px 0px 0px 20px;
+  color: white;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+footer nav i {
+  margin-right: 10px;
+  color: white;
 }
 /*# sourceMappingURL=menus.css.map */
