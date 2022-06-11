@@ -8,6 +8,7 @@ $couleur-tertiare:#99E2D0;
     font-family: "Raleway";
     src: url(../css/Raleway-VariableFont_wght.ttf);
     font-weight: 100 1000;
+    font-style: normal italic;
 }
 
 *{
@@ -98,6 +99,7 @@ header{
     h1{
 
         margin:30px 0px 50px 20px;
+        font-style: italic;
     }
 
     .heart{
