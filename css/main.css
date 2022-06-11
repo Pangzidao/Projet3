@@ -169,24 +169,23 @@ header img {
 }
 
 #section-presentation button {
-  background-color: #9356DC;
   padding: 20px;
   border: none;
   border-radius: 40px;
   color: white;
   font-weight: 500;
   margin: 20px 0px 60px 0px;
-  background-color: #9356DC;
-  -webkit-transition: background-color 0.5s, -webkit-box-shadow 0.5s;
-  transition: background-color 0.5s, -webkit-box-shadow 0.5s;
-  transition: background-color 0.5s, box-shadow 0.5s;
-  transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(#9356DC, #FF79DA);
   -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
           box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
+  -webkit-transition: background-image 1s linear;
+  transition: background-image 1s linear;
 }
 
 #section-presentation button:hover {
-  background-color: #FF79DA;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9256dcbc), to(#ff79d9cc));
+  background-image: linear-gradient(#9256dcbc, #ff79d9cc);
   -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -212,6 +211,10 @@ header img {
 
 #section-fonctionnement div:hover {
   background-color: #e6ecff;
+}
+
+#section-fonctionnement div:hover i {
+  color: #9356DC;
 }
 
 #section-fonctionnement div .numero-etape {
@@ -313,30 +316,59 @@ header img {
 
 #section-restaurants .carte .heart {
   position: absolute;
-  bottom: 60px;
   right: 60px;
+  bottom: 60px;
 }
 
-#section-restaurants .carte .heart-border {
-  color: black;
+@-webkit-keyframes fill {
+  from {
+    height: 40px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@keyframes fill {
+  from {
+    height: 40px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+#section-restaurants .carte .heart:hover {
+  cursor: pointer;
+}
+
+#section-restaurants .carte .heart:hover .fa-solid {
+  color: #9356DC;
+}
+
+#section-restaurants .carte .heart:hover .fa-regular {
+  color: #9356DC;
+}
+
+#section-restaurants .carte .heart:hover::after {
+  content: "";
+  width: 35px;
+  -webkit-animation: 1s fill;
+          animation: 1s fill;
   position: absolute;
-  font-size: xx-large;
-  pointer-events: none;
   z-index: 2;
+  background-color: white;
 }
 
-#section-restaurants .carte .heart-content {
-  position: absolute;
-  color: white;
+#section-restaurants .carte .heart i {
   font-size: xx-large;
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
-  z-index: 1;
+  position: absolute;
 }
 
-#section-restaurants .carte .heart-content:hover {
-  color: #FF79DA;
+#section-restaurants .carte .heart .fa-regular {
   z-index: 3;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 footer {

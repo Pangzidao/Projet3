@@ -101,34 +101,62 @@ header{
     }
 
     .heart{
-        position: absolute;
+        position:absolute;
+        right:60px;
         top: 30px;
-        right: 60px;
-    }
+        background-color:rgb(242, 242, 242);  
 
-    .heart-border{
-        color: black;
-        position: absolute;
-        font-size: xx-large;
-        pointer-events:none;
-        z-index: 2;
-    }
-    .heart-content{
-        position: absolute;
-        color: white;
-        font-size: xx-large;
-        transition: color 0.5s;
-        z-index: 1;
-
-        &:hover{
-            color: $couleur-secondaire;
-            z-index: 3;
+        
+        @keyframes fill{
+          from{height:40px}
+          to{height:0px}
         }
+        
+        &:hover{
+          cursor:pointer;
+          .fa-solid{
+           color:$couleur-primaire;
+          }
+
+          .fa-regular{
+            color: $couleur-primaire;
+          }
+
+
+           &::after{
+            content:"";
+            width:35px;
+            animation:1s fill ;
+            position:absolute;
+            z-index:2;
+            background-color:rgb(242, 242, 242);  
+            }
+        }
+        
+      
+        
+      
+        
+        i{
+        font-size:xx-large;
+        position:absolute;
+        }
+        
+        .fa-solid{
+            color:rgb(242, 242, 242);  
+            z-index:1
+        }
+        
+        .fa-regular{
+          z-index:3;
+          transition:color 1.5s;
+        }
+        
+      }
     }
 
     .partie-du-repas{
 
-        flex-basis: 400px;
 
     
         h2{
@@ -148,42 +176,43 @@ header{
 
         .plat{
             height: 70px;
-            width: auto;
             margin: 20px;
             background-color: white;
             border-radius:15px;
-            visibility: hidden;
             overflow: hidden;
-            position: relative;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            opacity: 0%;
 
             .plat-texte{
 
-                position: relative;
+                min-width:0px;
                 flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
 
                 h3,p{
                     margin-left: 20px;
-                }
-    
-                .prix{
-                    font-weight: bold;
-                    position: absolute;
-                    right:0px;
-                
-                }
-                
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                } 
 
             }
 
+            .prix{
+                font-weight: bold;
+                display: flex;
+                align-items: flex-end;
+                margin:8px;
             
-    
+            }
 
             .plat-hover-effect{
                 height: 100%;
-                width: 20%;
+                flex-basis:20%;
                 margin-right: -20%;
                 background-color: $couleur-tertiare;
                 transition: margin-right 0.5s;
@@ -217,8 +246,9 @@ header{
         .un{
             animation-name: plat;
             animation-duration: 1s;
+            animation-timing-function: linear;
             animation-iteration-count: 1;
-            animation-delay: 0.2s;
+            animation-delay: 0.3s;
             animation-fill-mode: forwards;
 
         }
@@ -227,7 +257,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 0.4s;
+            animation-delay: 0.6s;
             animation-fill-mode: forwards;
 
         }
@@ -236,7 +266,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 0.6s;
+            animation-delay: 0.9s;
             animation-fill-mode: forwards;
 
         }
@@ -245,7 +275,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 0.8s;
+            animation-delay: 1.2s;
             animation-fill-mode: forwards;
 
         }
@@ -254,7 +284,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 1s;
+            animation-delay: 1.5s;
             animation-fill-mode: forwards;
 
         }
@@ -263,7 +293,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 1.2s;
+            animation-delay: 1.8s;
             animation-fill-mode: forwards;
 
         }
@@ -272,7 +302,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 1.4s;
+            animation-delay: 2.1s;
             animation-fill-mode: forwards;
 
         }
@@ -281,7 +311,7 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 1.6s;
+            animation-delay: 2.4s;
             animation-fill-mode: forwards;
 
         }
@@ -290,19 +320,33 @@ header{
             animation-name: plat;
             animation-duration: 1s;
             animation-iteration-count: 1;
-            animation-delay: 1.8s;
+            animation-delay: 2.7s;
             animation-fill-mode: forwards;
 
         }
 
         @keyframes plat {
 
-            from{visibility: collapse;}
-            to{visibility: visible;}         
+            from{
+                opacity: 0%;
+                transform: scale(1.2);
+            }
+            50%{
+                visibility:50%;
+                transform: scale(1.1);
+
+                
+            }
+            to{
+                margin-top: 0px; 
+                opacity: 100%;
+                transform: scale(1);
+
+            }         
         }
 
     } 
-}
+
 
 footer{
     background-color:rgb(64, 64, 64);
