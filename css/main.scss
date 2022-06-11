@@ -261,6 +261,11 @@ header{
             position:absolute;
             }
             
+            .fa-solid{
+              color:transparent;
+              z-index:2;
+            }
+            
             .fa-regular{
               z-index:3;
               transition:color 1s;

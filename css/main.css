@@ -365,6 +365,11 @@ header img {
   position: absolute;
 }
 
+#section-restaurants .carte .heart .fa-solid {
+  color: transparent;
+  z-index: 2;
+}
+
 #section-restaurants .carte .heart .fa-regular {
   z-index: 3;
   -webkit-transition: color 1s;
