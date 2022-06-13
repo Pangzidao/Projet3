@@ -347,7 +347,7 @@ header img {
 }
 
 #section-restaurants .carte .heart:hover .fa-regular {
-  color: #9356DC;
+  color: #FF79DA;
 }
 
 #section-restaurants .carte .heart:hover::after {

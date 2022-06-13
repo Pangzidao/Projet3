@@ -161,7 +161,7 @@ header img {
 }
 
 #menu .heart:hover .fa-regular {
-  color: #9356DC;
+  color: #FF79DA;
 }
 
 #menu .heart:hover::after {
