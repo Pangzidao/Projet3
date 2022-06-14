@@ -1,7 +1,11 @@
+/*couleurs principales*/
+
 $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiare:#99E2D0;
 
+
+/*police*/
 
 
 @font-face {
@@ -10,11 +14,25 @@ $couleur-tertiare:#99E2D0;
     font-weight: 100 1000;
 }
 
+
+/*style universel*/
 *{
     box-sizing: border-box;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
+}
+
+/*spinning -loader*/
+
+@keyframes loading {
+    from {transform: rotate(0turn);}
+    to {transform: rotate(1turn);}
+}
+
+@keyframes dissapear{
+    from {visibility: visible;}
+    to {visibility: hidden;}
 }
 
 
@@ -46,17 +64,8 @@ $couleur-tertiare:#99E2D0;
   
 }
 
-@keyframes loading {
-    from {transform: rotate(0turn);}
-    to {transform: rotate(1turn);}
-}
 
-@keyframes dissapear{
-    from {visibility: visible;}
-    to {visibility: hidden;}
-}
-
-
+/*en-tête*/
 
 header{
     display: flex;
@@ -69,6 +78,7 @@ header{
     }
 }
 
+/*formulaire de localisation*/
 
 #section-de-localisation{
     background-color: rgb(230, 230, 230);
@@ -94,6 +104,8 @@ header{
         outline: none;
     }    
 }
+
+/*presentation de l'entreprise*/
 
 #section-presentation{
     background-color: rgb(242, 242, 242);
@@ -130,6 +142,8 @@ header{
         }
     }
 }
+
+/*guide d'utilisation*/
 
 #section-fonctionnement{
     margin:30px 20px 50px 20px;
@@ -170,6 +184,8 @@ header{
         }
     }
 }
+
+/*les restaurants*/
 
 #section-restaurants{
     background-color: rgb(242, 242, 242);
@@ -277,6 +293,8 @@ header{
     }  
 }
 
+/*pied de page*/
+
 footer{
     background-color:rgb(64, 64, 64);
     height:180px;
@@ -306,6 +324,9 @@ footer{
     }
 
 }
+
+/*mode tablette/mobile*/
+
 
 @media (min-width:768px){
 

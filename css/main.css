@@ -1,15 +1,59 @@
+@charset "UTF-8";
+/*couleurs principales*/
+/*police*/
 @font-face {
   font-family: "Raleway";
   src: url(../css/Raleway-VariableFont_wght.ttf);
   font-weight: 100 1000;
 }
 
+/*style universel*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: black;
+}
+
+/*spinning -loader*/
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes dissapear {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes dissapear {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
 }
 
 #loader {
@@ -49,46 +93,7 @@
           animation: loading 0.75s ease infinite;
 }
 
-@-webkit-keyframes loading {
-  from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
-@keyframes loading {
-  from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
-@-webkit-keyframes dissapear {
-  from {
-    visibility: visible;
-  }
-  to {
-    visibility: hidden;
-  }
-}
-
-@keyframes dissapear {
-  from {
-    visibility: visible;
-  }
-  to {
-    visibility: hidden;
-  }
-}
-
+/*en-tête*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,6 +111,7 @@ header img {
   margin: 20px;
 }
 
+/*formulaire de localisation*/
 #section-de-localisation {
   background-color: #e6e6e6;
   display: -webkit-box;
@@ -140,6 +146,7 @@ header img {
   outline: none;
 }
 
+/*presentation de l'entreprise*/
 #section-presentation {
   background-color: #f2f2f2;
   display: -webkit-box;
@@ -191,6 +198,7 @@ header img {
   cursor: pointer;
 }
 
+/*guide d'utilisation*/
 #section-fonctionnement {
   margin: 30px 20px 50px 20px;
 }
@@ -237,6 +245,7 @@ header img {
   font-weight: 500;
 }
 
+/*les restaurants*/
 #section-restaurants {
   background-color: #f2f2f2;
   display: -webkit-box;
@@ -376,6 +385,7 @@ header img {
   transition: color 1s;
 }
 
+/*pied de page*/
 footer {
   background-color: #404040;
   height: 180px;
@@ -412,6 +422,7 @@ footer nav i {
   color: white;
 }
 
+/*mode tablette/mobile*/
 @media (min-width: 768px) {
   #section-fonctionnement {
     display: -webkit-box;
