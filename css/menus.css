@@ -190,8 +190,13 @@ header img {
   transition: color 1.5s;
 }
 
+.partie-du-repas {
+  width: 100%;
+  max-width: 400px;
+}
+
 .partie-du-repas h2 {
-  margin: 30px 0px 20px 20px;
+  margin: 0px 10px 20px 10px;
   font-size: medium;
   font-weight: 300;
   display: -webkit-box;
@@ -212,7 +217,8 @@ header img {
 
 .partie-du-repas .plat {
   height: 70px;
-  margin: 20px;
+  margin: 0px 10px 20px 10px;
+  min-width: 0px;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -230,10 +236,10 @@ header img {
 }
 
 .partie-du-repas .plat .plat-texte {
-  min-width: 0px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  min-width: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

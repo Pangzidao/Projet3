@@ -152,17 +152,18 @@ header{
         .fa-regular{
           z-index:3;
           transition:color 1.5s;
-        }
         
-      }
+        }
     }
+}
 
-    .partie-du-repas{
+.partie-du-repas{   
 
-
+        width:100%;
+        max-width: 400px;
     
         h2{
-            margin:30px 0px 20px 20px;
+            margin:0px 10px 20px 10px;
             font-size: medium;
             font-weight: 300;
             display: flex;
@@ -178,7 +179,8 @@ header{
 
         .plat{
             height: 70px;
-            margin: 20px;
+            margin: 0px 10px 20px 10px;
+            min-width: 0px;
             background-color: white;
             border-radius:15px;
             overflow: hidden;
@@ -189,8 +191,8 @@ header{
 
             .plat-texte{
 
-                min-width:0px;
                 flex-grow: 1;
+                min-width: 0px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
