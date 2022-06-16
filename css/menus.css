@@ -4,10 +4,8 @@
   font-weight: 100 1000;
   font-style: normal italic;
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: black;
@@ -15,27 +13,18 @@
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 header a {
   position: absolute;
   left: 25px;
 }
-
 header a i {
   font-weight: bold;
   font-size: x-large;
 }
-
 header img {
   width: 200px;
   margin: 20px;
@@ -43,23 +32,18 @@ header img {
 
 #image-restaurant {
   height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
-
 #image-restaurant img {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 #menu {
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -67,32 +51,16 @@ header img {
   margin-top: -40px;
   z-index: 2;
   border-radius: 40px 40px 0px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
-
 #menu #liste-plats {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
 }
-
 #menu button {
   padding: 20px;
   border: none;
@@ -100,40 +68,29 @@ header img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   color: white;
   font-weight: 500;
   margin: 20px 0px 60px 0px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
-          box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
-  -webkit-transition: background-image 1s linear;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
   transition: background-image 1s linear;
 }
-
 #menu button:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9256dcbc), to(#ff79d9cc));
-  background-image: linear-gradient(#9256dcbc, #ff79d9cc);
-  -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(rgba(146, 86, 220, 0.737254902), rgba(255, 121, 217, 0.8));
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-
 #menu h1 {
   margin: 30px 0px 50px 20px;
   font-style: italic;
 }
-
 #menu .heart {
   position: absolute;
   right: 60px;
   top: 30px;
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
 }
-
 @-webkit-keyframes fill {
   from {
     height: 40px;
@@ -142,7 +99,6 @@ header img {
     height: 0px;
   }
 }
-
 @keyframes fill {
   from {
     height: 40px;
@@ -151,19 +107,15 @@ header img {
     height: 0px;
   }
 }
-
 #menu .heart:hover {
   cursor: pointer;
 }
-
 #menu .heart:hover .fa-solid {
   color: #FF79DA;
 }
-
 #menu .heart:hover .fa-regular {
   color: #FF79DA;
 }
-
 #menu .heart:hover::after {
   content: "";
   width: 35px;
@@ -171,22 +123,18 @@ header img {
           animation: 1s fill;
   position: absolute;
   z-index: 2;
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
 }
-
 #menu .heart i {
   font-size: xx-large;
   position: absolute;
 }
-
 #menu .heart .fa-solid {
-  color: #f2f2f2;
+  color: rgb(242, 242, 242);
   z-index: 1;
 }
-
 #menu .heart .fa-regular {
   z-index: 3;
-  -webkit-transition: color 1.5s;
   transition: color 1.5s;
 }
 
@@ -194,27 +142,19 @@ header img {
   width: 100%;
   max-width: 400px;
 }
-
 .partie-du-repas h2 {
   margin: 0px 10px 20px 10px;
   font-size: medium;
   font-weight: 300;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .partie-du-repas h2::after {
   content: "";
   height: 2px;
   width: 45px;
   background-color: #99E2D0;
 }
-
 .partie-du-repas .plat {
   height: 70px;
   margin: 0px 10px 20px 10px;
@@ -222,72 +162,40 @@ header img {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   opacity: 0%;
 }
-
 .partie-du-repas .plat .plat-texte {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   min-width: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 .partie-du-repas .plat .plat-texte h3, .partie-du-repas .plat .plat-texte p {
   margin-left: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .partie-du-repas .plat .prix {
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   margin: 8px;
 }
-
 .partie-du-repas .plat .plat-hover-effect {
   height: 100%;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  flex-basis: 20%;
   margin-right: -20%;
   background-color: #99E2D0;
-  -webkit-transition: margin-right 0.5s;
   transition: margin-right 0.5s;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .partie-du-repas .plat .plat-hover-effect i {
   background-color: white;
   padding: 4px;
@@ -295,15 +203,12 @@ header img {
   color: #99E2D0;
   font-weight: bold;
 }
-
 .partie-du-repas .plat:hover {
   cursor: pointer;
 }
-
 .partie-du-repas .plat:hover .plat-hover-effect {
   margin-right: 0px;
 }
-
 .partie-du-repas .un {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -318,7 +223,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .deux {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -331,7 +235,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .trois {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -344,7 +247,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .quatre {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -357,7 +259,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .cinq {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -370,7 +271,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .six {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -383,7 +283,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .sept {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -396,7 +295,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .huit {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -409,7 +307,6 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .partie-du-repas .neuf {
   -webkit-animation-name: plat;
           animation-name: plat;
@@ -422,78 +319,59 @@ header img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 @-webkit-keyframes plat {
   from {
     opacity: 0%;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   50% {
     visibility: 50%;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   to {
     margin-top: 0px;
     opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @keyframes plat {
   from {
     opacity: 0%;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   50% {
     visibility: 50%;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   to {
     margin-top: 0px;
     opacity: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 footer {
-  background-color: #404040;
+  background-color: rgb(64, 64, 64);
   height: 180px;
   z-index: 5;
   bottom: 0px;
 }
-
 footer img {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
   width: 100px;
   margin: 20px 0px 0px 20px;
 }
-
 footer nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 footer nav a {
   margin: 10px 0px 0px 20px;
   color: white;
 }
-
 footer nav a:hover {
   text-decoration: underline;
 }
-
 footer nav i {
   margin-right: 10px;
   color: white;
@@ -501,28 +379,19 @@ footer nav i {
 
 @media (min-width: 768px) {
   footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   footer img {
     width: 200px;
     margin-left: 40px;
   }
   footer nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     margin: 10px 0px 10px 20px;
   }
   footer nav a {
     font-size: large;
     margin: 20px 15px 0px 20px;
   }
-}
-/*# sourceMappingURL=menus.css.map */
+}/*# sourceMappingURL=menus.css.map */
