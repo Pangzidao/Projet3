@@ -1,5 +1,5 @@
-@charset "UTF-8";
 /*couleurs principales*/
+/*couleurs background*/
 /*police*/
 @font-face {
   font-family: "Raleway";
@@ -77,7 +77,7 @@
           animation: loading 0.75s ease infinite;
 }
 
-/*en-tête*/
+/*header*/
 header {
   display: flex;
   justify-content: center;
@@ -147,7 +147,7 @@ header img {
   cursor: pointer;
 }
 
-/*guide d'utilisation*/
+/*section-fontionnement*/
 #section-fonctionnement {
   margin: 30px 20px 50px 20px;
 }
@@ -183,20 +183,25 @@ header img {
   font-weight: 500;
 }
 
-/*les restaurants*/
+/*section-restaurants*/
 #section-restaurants {
   background-color: rgb(242, 242, 242);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 #section-restaurants h2 {
-  padding: 20px 20px 50px 20px;
+  margin: 60px 20px 10px 20px;
   align-self: flex-start;
 }
-#section-restaurants .carte {
+#section-restaurants #zone-carte {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#section-restaurants #zone-carte .carte {
   height: 300px;
-  flex-basis: 350px;
+  flex-basis: 300px;
   background-color: white;
   border-radius: 20px;
   margin: 20px;
@@ -209,12 +214,12 @@ header img {
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.21);
   transition: all 0.2s;
 }
-#section-restaurants .carte:hover {
-  transform: scale(1.05);
+#section-restaurants #zone-carte .carte:hover {
+  transform: scale(1.03);
   box-shadow: 0px 0px 30px 9px rgba(0, 0, 0, 0.21);
 }
-#section-restaurants .carte .nouveau {
-  background-color: aquamarine;
+#section-restaurants #zone-carte .carte .nouveau {
+  background-color: #99E2D0;
   color: green;
   font-weight: 600;
   position: absolute;
@@ -222,16 +227,16 @@ header img {
   margin-right: 20px;
   padding: 10px;
 }
-#section-restaurants .carte img {
+#section-restaurants #zone-carte .carte img {
   width: 100%;
   height: 75%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#section-restaurants .carte h3, #section-restaurants .carte p {
+#section-restaurants #zone-carte .carte h3, #section-restaurants #zone-carte .carte p {
   margin: 5px 0px 0px 10px;
 }
-#section-restaurants .carte .heart {
+#section-restaurants #zone-carte .carte .heart {
   position: absolute;
   right: 60px;
   bottom: 60px;
@@ -252,16 +257,16 @@ header img {
     height: 0px;
   }
 }
-#section-restaurants .carte .heart:hover {
+#section-restaurants #zone-carte .carte .heart:hover {
   cursor: pointer;
 }
-#section-restaurants .carte .heart:hover .fa-solid {
+#section-restaurants #zone-carte .carte .heart:hover .fa-solid {
   color: #FF79DA;
 }
-#section-restaurants .carte .heart:hover .fa-regular {
+#section-restaurants #zone-carte .carte .heart:hover .fa-regular {
   color: #FF79DA;
 }
-#section-restaurants .carte .heart:hover::after {
+#section-restaurants #zone-carte .carte .heart:hover::after {
   content: "";
   width: 35px;
   -webkit-animation: 1s fill;
@@ -270,15 +275,15 @@ header img {
   z-index: 2;
   background-color: white;
 }
-#section-restaurants .carte .heart i {
+#section-restaurants #zone-carte .carte .heart i {
   font-size: xx-large;
   position: absolute;
 }
-#section-restaurants .carte .heart .fa-solid {
+#section-restaurants #zone-carte .carte .heart .fa-solid {
   color: transparent;
   z-index: 2;
 }
-#section-restaurants .carte .heart .fa-regular {
+#section-restaurants #zone-carte .carte .heart .fa-regular {
   z-index: 3;
   transition: color 1s;
 }
