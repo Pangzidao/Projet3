@@ -23,6 +23,48 @@ $couleur-tertiare:#99E2D0;
     color: black;
 }
 
+/*spinning -loader*/
+
+@keyframes loading {
+    from {transform: rotate(0turn);}
+    to {transform: rotate(1turn);}
+}
+
+@keyframes dissapear{
+    from {visibility: visible;}
+    to {visibility: hidden;}
+}
+
+
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    animation-name:dissapear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    z-index: 5;
+    visibility: hidden;
+
+    &::after{
+        content:"";
+        width:75px;
+        height:75px;
+        border:15px solid $couleur-primaire;
+        border-top-color: $couleur-secondaire;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+    }
+  
+}
+
+
 /*en-tête*/
 
 header{
@@ -34,6 +76,221 @@ header{
         width: 200px;
         margin:20px;
     }
+}
+
+/*formulaire de localisation*/
+
+#section-de-localisation{
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 10px 13px -3px rgba(0,0,0,0.3);
+    font-size: large;
+
+    i{
+        margin-left: 40px;
+    }
+
+    input{
+        border: none;
+        background-color: inherit;
+        font-weight: 600;
+        width:fit-content;
+        margin:20px 0px 20px 10px;
+    }
+
+    input:focus{
+        outline: none;
+    }    
+}
+
+/*presentation de l'entreprise*/
+
+#section-presentation{
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        margin:40px 60px 10px 60px;
+        text-align: center;
+    }
+
+    p{
+        margin:10px 50px 20px 50px;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    button{
+        padding: 20px;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-weight: 500;
+        margin:20px 0px 60px 0px;
+        background-image:linear-gradient($couleur-primaire,$couleur-secondaire);
+        box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.21);
+        transition: background-image 1s linear;
+        &:hover{
+            background-image: linear-gradient(#9256dcbc,#ff79d9cc),;
+            box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+    }
+}
+
+/*guide d'utilisation*/
+
+#section-fonctionnement{
+    margin:30px 20px 50px 20px;
+    div{
+        display: flex;
+        align-items: center;
+        background-color: rgb(242, 242, 242);
+        border-radius: 20px;
+        margin: 20px;
+        box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.21);
+
+        &:hover{
+            background-color: rgb(230, 236, 255);
+
+            i{
+                color: $couleur-primaire;
+            }
+        }
+
+        .numero-etape{
+            margin-right: 20px;
+            background-color: $couleur-primaire;
+            color: white;
+            font-size: large;
+            padding: 5px 10px 5px 10px;
+            border-radius: 100%;
+            margin-left: -15px;
+        }
+
+        i{
+            font-size: x-large;
+            color:rgb(140, 140, 140);
+            margin-right:15px;
+        }
+
+        .texte-etape{
+            font-weight: 500;
+        }
+    }
+}
+
+/*les restaurants*/
+
+#section-restaurants{
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        padding:20px 20px 50px 20px;
+        align-self: flex-start;
+    }
+
+    .carte{
+        height: 300px;
+        flex-basis: 350px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        position: relative;
+        box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.21);
+        transition: all 0.2s;
+
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.21);
+        }
+
+        .nouveau{
+            background-color: aquamarine;
+            color:green;
+            font-weight: 600;
+            position: absolute;
+            align-self: flex-end;
+            margin-right: 20px;
+            padding:10px;
+        }
+
+        img{
+            width:100%;
+            height: 75%;
+            object-fit: cover;
+        }
+        h3,p{
+            margin: 5px 0px 0px 10px;
+        }
+
+        .heart{
+            position:absolute;
+            right:60px;
+            bottom: 60px;
+            
+            @keyframes fill{
+              from{height:40px}
+              to{height:0px}
+            }
+            
+            &:hover{
+              cursor:pointer;
+              .fa-solid{
+               color:$couleur-secondaire;
+              }
+
+              .fa-regular{
+                color: $couleur-secondaire;
+              }
+
+
+               &::after{
+                content:"";
+                width:35px;
+                animation:1s fill ;
+                position:absolute;
+                z-index:2;
+                background-color:white;   
+                }
+            }
+            
+          
+            
+          
+            
+            i{
+            font-size:xx-large;
+            position:absolute;
+            }
+            
+            .fa-solid{
+              color:transparent;
+              z-index:2;
+            }
+            
+            .fa-regular{
+              z-index:3;
+              transition:color 1s;
+            }
+            
+          }
+          
+          
+    }  
 }
 
 /*pied de page*/
