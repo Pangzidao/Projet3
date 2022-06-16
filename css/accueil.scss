@@ -1,3 +1,6 @@
+@import url("normalize.scss");
+@import url("main.scss");
+
 /*spinning -loader*/
 
 @keyframes loading {
@@ -39,19 +42,6 @@
   
 }
 
-
-/*en-tête*/
-
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    img{
-        width: 200px;
-        margin:20px;
-    }
-}
 
 /*formulaire de localisation*/
 
@@ -346,4 +336,5 @@ footer{
         }
 
     }
-}
+
+
