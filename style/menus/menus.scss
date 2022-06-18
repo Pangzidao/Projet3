@@ -104,7 +104,7 @@ header{
 
     /*nom du restaurant*/
     h1{
-        margin:30px 0px 50px 40px;
+        margin:30px 0px 50px 5%;
         font-style: italic;
         font-family:'Times New Roman', Times, serif;
         font-weight: bolder;
@@ -113,7 +113,7 @@ header{
     /*coeur animé*/
     .heart{
         position:absolute;
-        right:60px;
+        right:55px;
         top: 30px;
         background-color:rgb(242, 242, 242);  
       
