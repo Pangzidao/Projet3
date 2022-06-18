@@ -2,8 +2,6 @@ $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiare:#99E2D0;
 
-
-
 @font-face {
     font-family: "Raleway";
     src: url("../Raleway-VariableFont_wght.ttf");
@@ -13,7 +11,7 @@ $couleur-tertiare:#99E2D0;
 
 *{
     box-sizing: border-box;
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-family: "Raleway", Arial, Helvetica, sans-serif,cursive;
     text-decoration: none;
     color: black;
     margin: 0px;
@@ -30,8 +28,7 @@ header{
 
         i{
             font-weight: bold;
-            font-size:x-large;
-         
+            font-size:x-large;     
         }
 
     }
@@ -99,6 +96,8 @@ header{
 
         margin:30px 0px 50px 20px;
         font-style: italic;
+        font-family: cursive;
+        font-weight:900;
     }
 
     .heart{
@@ -133,11 +132,7 @@ header{
             background-color:rgb(242, 242, 242);  
             }
         }
-        
-      
-        
-      
-        
+                
         i{
         font-size:xx-large;
         position:absolute;

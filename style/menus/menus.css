@@ -6,7 +6,7 @@
 }
 * {
   box-sizing: border-box;
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial, Helvetica, sans-serif, cursive;
   text-decoration: none;
   color: black;
   margin: 0px;
@@ -83,6 +83,8 @@ header img {
 #menu h1 {
   margin: 30px 0px 50px 20px;
   font-style: italic;
+  font-family: cursive;
+  font-weight: 900;
 }
 #menu .heart {
   position: absolute;
