@@ -345,7 +345,7 @@ footer nav i {
   }
   #section-restaurants h2 {
     align-self: center;
-    padding: 20px 0px 0px 0px;
+    margin: 40px;
   }
   #section-restaurants #zone-carte {
     display: flex;
