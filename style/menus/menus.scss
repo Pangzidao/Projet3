@@ -8,6 +8,24 @@ $dark-background-color: rgb(230, 230, 230);
 $light-background-color:rgb(242, 242, 242);
 
 /*animation des plats*/
+@keyframes plat {
+
+    from{
+        opacity: 0%;
+        transform: scale(1.2);
+    }
+    50%{
+        visibility:50%;
+        transform: scale(1.1);      
+    }
+
+    to{
+        margin-top: 0px; 
+        opacity: 100%;
+        transform: scale(1);
+    }         
+}
+
 @mixin animation-plat($delay){
 
     animation-name: plat;
@@ -84,12 +102,7 @@ header{
     flex-direction: column;
     position: relative;
 
-    #liste-plats{
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-    }
-
+    /*nom du restaurant*/
     h1{
         margin:30px 0px 50px 40px;
         font-style: italic;
@@ -97,6 +110,7 @@ header{
         font-weight: bolder;
     }
 
+    /*coeur animé*/
     .heart{
         position:absolute;
         right:60px;
@@ -144,6 +158,144 @@ header{
         }
     }
 
+    /*liste des plats*/
+    #liste-plats{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+
+        /*parties du repas*/
+        .partie-du-repas{   
+
+            width:100%;
+            max-width: 400px;
+            
+            /*nom de la partie du repas*/
+            h2{
+                margin:0px 10px 20px 10px;
+                font-size: medium;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+        
+                &::after{
+                    content: "";
+                    height: 2px;
+                    width: 45px;
+                    background-color: $couleur-tertiare;
+                }
+            }
+            
+            /*plats*/
+            .plat{
+                height: 70px;
+                margin: 0px 10px 20px 10px;
+                min-width: 0px;
+                background-color: white;
+                border-radius:15px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                opacity: 0%;
+    
+                .plat-texte{
+    
+                    flex-grow: 1;
+                    min-width: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+    
+                    h3,p{
+                        margin-left: 20px;
+                        white-space:nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    } 
+                }
+    
+                .prix{
+                    font-weight: bold;
+                    display: flex;
+                    align-items: flex-end;
+                    margin:8px;        
+                }
+    
+                .plat-hover-effect{
+                    height: 100%;
+                    flex-basis:20%;
+                    margin-right: -20%;
+                    background-color: $couleur-tertiare;
+                    transition: margin-right 0.5s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    i{
+                        background-color: white;
+                        padding: 4px;
+                        border-radius: 50%;
+                        color: $couleur-tertiare;
+                        font-weight: bold;
+                    }
+                }
+    
+                &:hover{
+                    cursor: pointer;
+    
+                    .plat-hover-effect{
+                        margin-right:0px;
+                    }
+                }
+            }
+
+            /*animations des plats*/
+    
+            .un{
+                @include animation-plat(0.2s);
+            }
+    
+            .deux{
+                @include animation-plat(0.4s);
+            }
+    
+            .trois{
+                @include animation-plat(0.6s);
+            }
+    
+            .quatre{
+                @include animation-plat(0.8s);
+            }
+    
+            .cinq{
+                @include animation-plat(1s);
+            }
+    
+            .six{
+                @include animation-plat(1.2s);
+            }
+    
+            .sept{
+                @include animation-plat(1.4s);
+            }
+    
+            .huit{
+                @include animation-plat(1.6s);
+            }
+    
+            .neuf{
+                @include animation-plat(1.8s);
+            }
+    
+    
+            .dix{
+                @include animation-plat(2s);
+            }
+        } 
+    }
+
+    /*bouton "commander"*/
     button{
         padding: 20px;
         border: none;
@@ -164,157 +316,7 @@ header{
     }
 }
 
-.partie-du-repas{   
-
-        width:100%;
-        max-width: 400px;
-    
-        h2{
-            margin:0px 10px 20px 10px;
-            font-size: medium;
-            font-weight: 300;
-            display: flex;
-            flex-direction: column;
-    
-            &::after{
-                content: "";
-                height: 2px;
-                width: 45px;
-                background-color: $couleur-tertiare;
-            }
-        }
-
-        .plat{
-            height: 70px;
-            margin: 0px 10px 20px 10px;
-            min-width: 0px;
-            background-color: white;
-            border-radius:15px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            opacity: 0%;
-
-            .plat-texte{
-
-                flex-grow: 1;
-                min-width: 0px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-
-                h3,p{
-                    margin-left: 20px;
-                    white-space:nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                } 
-
-            }
-
-            .prix{
-                font-weight: bold;
-                display: flex;
-                align-items: flex-end;
-                margin:8px;
-            
-            }
-
-            .plat-hover-effect{
-                height: 100%;
-                flex-basis:20%;
-                margin-right: -20%;
-                background-color: $couleur-tertiare;
-                transition: margin-right 0.5s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                
-
-                i{
-                    background-color: white;
-                    padding: 4px;
-                    border-radius: 50%;
-                    color: $couleur-tertiare;
-                    font-weight: bold;
-
-                }
-            }
-
-       
-
-            &:hover{
-                cursor: pointer;
-
-                .plat-hover-effect{
-                    margin-right:0px;
-                }
-            }
-        }
-
-        .un{
-            @include animation-plat(0.2s);
-        }
-
-        .deux{
-            @include animation-plat(0.4s);
-        }
-
-        .trois{
-            @include animation-plat(0.6s);
-        }
-
-        .quatre{
-            @include animation-plat(0.8s);
-        }
-
-        .cinq{
-            @include animation-plat(1s);
-        }
-
-        .six{
-            @include animation-plat(1.2s);
-        }
-
-        .sept{
-            @include animation-plat(1.4s);
-        }
-
-        .huit{
-            @include animation-plat(1.6s);
-        }
-
-        .neuf{
-            @include animation-plat(1.8s);
-        }
-
-
-        .dix{
-            @include animation-plat(2s);
-        }
-
-        @keyframes plat {
-
-            from{
-                opacity: 0%;
-                transform: scale(1.2);
-            }
-            50%{
-                visibility:50%;
-                transform: scale(1.1);      
-            }
-
-            to{
-                margin-top: 0px; 
-                opacity: 100%;
-                transform: scale(1);
-            }         
-        }
-
-    } 
-
-
+/*footer*/
 footer{
     background-color:rgb(64, 64, 64);
     height:180px;
@@ -342,11 +344,10 @@ footer{
             margin-right: 10px;
             color:white;
         }
-
     }
-
 }
 
+/*responsive pour mobile et desktop*/
 @media (min-width:768px){
 
     footer{
@@ -357,13 +358,14 @@ footer{
             width: 200px;
             margin-left: 40px;
         }
+
         nav{
             flex-direction: row;       
             margin:10px 0px 10px 20px;
+
             a{
                 font-size: large;
                 margin: 20px 15px 0px 20px;
-           
             }
         }
     }

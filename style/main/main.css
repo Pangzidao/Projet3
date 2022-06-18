@@ -288,7 +288,7 @@ header img {
   transition: color 1s;
 }
 
-/*pied de page*/
+/*footer*/
 footer {
   background-color: rgb(64, 64, 64);
   height: 180px;
@@ -314,7 +314,7 @@ footer nav i {
   color: white;
 }
 
-/*mode tablette/mobile*/
+/*responsive pour tablette et desktop*/
 @media (min-width: 768px) {
   #section-fonctionnement {
     display: flex;

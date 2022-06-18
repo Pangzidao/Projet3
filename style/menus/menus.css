@@ -1,6 +1,37 @@
+@charset "UTF-8";
 /*couleurs principales*/
 /*background-colors*/
 /*animation des plats*/
+@-webkit-keyframes plat {
+  from {
+    opacity: 0%;
+    transform: scale(1.2);
+  }
+  50% {
+    visibility: 50%;
+    transform: scale(1.1);
+  }
+  to {
+    margin-top: 0px;
+    opacity: 100%;
+    transform: scale(1);
+  }
+}
+@keyframes plat {
+  from {
+    opacity: 0%;
+    transform: scale(1.2);
+  }
+  50% {
+    visibility: 50%;
+    transform: scale(1.1);
+  }
+  to {
+    margin-top: 0px;
+    opacity: 100%;
+    transform: scale(1);
+  }
+}
 /*police*/
 @font-face {
   font-family: "Raleway";
@@ -63,11 +94,10 @@ header img {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-#menu #liste-plats {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
+  /*nom du restaurant*/
+  /*coeur animé*/
+  /*liste des plats*/
+  /*bouton "commander"*/
 }
 #menu h1 {
   margin: 30px 0px 50px 40px;
@@ -127,6 +157,226 @@ header img {
   z-index: 3;
   transition: color 1.5s;
 }
+#menu #liste-plats {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  /*parties du repas*/
+}
+#menu #liste-plats .partie-du-repas {
+  width: 100%;
+  max-width: 400px;
+  /*nom de la partie du repas*/
+  /*plats*/
+  /*animations des plats*/
+}
+#menu #liste-plats .partie-du-repas h2 {
+  margin: 0px 10px 20px 10px;
+  font-size: medium;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+#menu #liste-plats .partie-du-repas h2::after {
+  content: "";
+  height: 2px;
+  width: 45px;
+  background-color: #99E2D0;
+}
+#menu #liste-plats .partie-du-repas .plat {
+  height: 70px;
+  margin: 0px 10px 20px 10px;
+  min-width: 0px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 0%;
+}
+#menu #liste-plats .partie-du-repas .plat .plat-texte {
+  flex-grow: 1;
+  min-width: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#menu #liste-plats .partie-du-repas .plat .plat-texte h3, #menu #liste-plats .partie-du-repas .plat .plat-texte p {
+  margin-left: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu #liste-plats .partie-du-repas .plat .prix {
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  margin: 8px;
+}
+#menu #liste-plats .partie-du-repas .plat .plat-hover-effect {
+  height: 100%;
+  flex-basis: 20%;
+  margin-right: -20%;
+  background-color: #99E2D0;
+  transition: margin-right 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu #liste-plats .partie-du-repas .plat .plat-hover-effect i {
+  background-color: white;
+  padding: 4px;
+  border-radius: 50%;
+  color: #99E2D0;
+  font-weight: bold;
+}
+#menu #liste-plats .partie-du-repas .plat:hover {
+  cursor: pointer;
+}
+#menu #liste-plats .partie-du-repas .plat:hover .plat-hover-effect {
+  margin-right: 0px;
+}
+#menu #liste-plats .partie-du-repas .un {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .deux {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .trois {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .quatre {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .cinq {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .six {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .sept {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .huit {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .neuf {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#menu #liste-plats .partie-du-repas .dix {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 #menu button {
   padding: 20px;
   border: none;
@@ -148,248 +398,7 @@ header img {
   cursor: pointer;
 }
 
-.partie-du-repas {
-  width: 100%;
-  max-width: 400px;
-}
-.partie-du-repas h2 {
-  margin: 0px 10px 20px 10px;
-  font-size: medium;
-  font-weight: 300;
-  display: flex;
-  flex-direction: column;
-}
-.partie-du-repas h2::after {
-  content: "";
-  height: 2px;
-  width: 45px;
-  background-color: #99E2D0;
-}
-.partie-du-repas .plat {
-  height: 70px;
-  margin: 0px 10px 20px 10px;
-  min-width: 0px;
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  opacity: 0%;
-}
-.partie-du-repas .plat .plat-texte {
-  flex-grow: 1;
-  min-width: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.partie-du-repas .plat .plat-texte h3, .partie-du-repas .plat .plat-texte p {
-  margin-left: 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.partie-du-repas .plat .prix {
-  font-weight: bold;
-  display: flex;
-  align-items: flex-end;
-  margin: 8px;
-}
-.partie-du-repas .plat .plat-hover-effect {
-  height: 100%;
-  flex-basis: 20%;
-  margin-right: -20%;
-  background-color: #99E2D0;
-  transition: margin-right 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.partie-du-repas .plat .plat-hover-effect i {
-  background-color: white;
-  padding: 4px;
-  border-radius: 50%;
-  color: #99E2D0;
-  font-weight: bold;
-}
-.partie-du-repas .plat:hover {
-  cursor: pointer;
-}
-.partie-du-repas .plat:hover .plat-hover-effect {
-  margin-right: 0px;
-}
-.partie-du-repas .un {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .deux {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .trois {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .quatre {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .cinq {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .six {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .sept {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .huit {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .neuf {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.partie-du-repas .dix {
-  -webkit-animation-name: plat;
-          animation-name: plat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@-webkit-keyframes plat {
-  from {
-    opacity: 0%;
-    transform: scale(1.2);
-  }
-  50% {
-    visibility: 50%;
-    transform: scale(1.1);
-  }
-  to {
-    margin-top: 0px;
-    opacity: 100%;
-    transform: scale(1);
-  }
-}
-@keyframes plat {
-  from {
-    opacity: 0%;
-    transform: scale(1.2);
-  }
-  50% {
-    visibility: 50%;
-    transform: scale(1.1);
-  }
-  to {
-    margin-top: 0px;
-    opacity: 100%;
-    transform: scale(1);
-  }
-}
-
+/*footer*/
 footer {
   background-color: rgb(64, 64, 64);
   height: 180px;
@@ -417,6 +426,7 @@ footer nav i {
   color: white;
 }
 
+/*responsive pour mobile et desktop*/
 @media (min-width: 768px) {
   footer {
     display: flex;

@@ -281,9 +281,7 @@ header{
     }
 }  
 
-
-/*pied de page*/
-
+/*footer*/
 footer{
     background-color:rgb(64, 64, 64);
     height:180px;
@@ -314,9 +312,7 @@ footer{
 
 }
 
-/*mode tablette/mobile*/
-
-
+/*responsive pour tablette et desktop*/
 @media (min-width:768px){
 
     #section-fonctionnement{
