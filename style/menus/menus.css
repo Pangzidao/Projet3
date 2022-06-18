@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Raleway";
-  src: url(../css/Raleway-VariableFont_wght.ttf);
+  src: url("../Raleway-VariableFont_wght.ttf");
   font-weight: 100 1000;
   font-style: normal italic;
 }
@@ -316,6 +316,18 @@ header img {
           animation-iteration-count: 1;
   -webkit-animation-delay: 2.7s;
           animation-delay: 2.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.partie-du-repas .dix {
+  -webkit-animation-name: plat;
+          animation-name: plat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
