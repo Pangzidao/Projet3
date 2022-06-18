@@ -116,7 +116,7 @@ header{
         text-align: center;
         font-weight: 200;
     }
-
+    /*bouton "Explorer nos restaurants"*/
     button{
         padding: 20px;
         border: none;
@@ -230,7 +230,8 @@ header{
             h3,p{
                 margin: 5px 0px 0px 10px;
             }
-    
+            
+            /*coeur animé*/
             .heart{
                 position:absolute;
                 right:60px;
@@ -250,7 +251,6 @@ header{
                   .fa-regular{
                     color: $couleur-secondaire;
                   }
-    
     
                    &::after{
                     content:"";
