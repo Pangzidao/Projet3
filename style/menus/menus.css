@@ -221,8 +221,8 @@ header img {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-delay: 0.2;
+          animation-delay: 0.2;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -231,22 +231,28 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.4;
+          animation-delay: 0.4;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2;
+          animation-delay: 2;
 }
 .partie-du-repas .trois {
   -webkit-animation-name: plat;
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-delay: 0.6;
+          animation-delay: 0.6;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -255,10 +261,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: 0.8;
+          animation-delay: 0.8;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -267,10 +275,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 1;
+          animation-delay: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -279,10 +289,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  -webkit-animation-delay: 1.2;
+          animation-delay: 1.2;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -291,10 +303,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+  -webkit-animation-delay: 1.4;
+          animation-delay: 1.4;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -303,10 +317,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  -webkit-animation-delay: 1.6;
+          animation-delay: 1.6;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -315,10 +331,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
+  -webkit-animation-delay: 1.8;
+          animation-delay: 1.8;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -327,10 +345,12 @@ header img {
           animation-name: plat;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2;
+          animation-delay: 2;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
