@@ -15,7 +15,7 @@ $light-background-color:rgb(242, 242, 242);
         transform: scale(1.2);
     }
     50%{
-        visibility:50%;
+        opacity:50%;
         transform: scale(1.1);      
     }
 
@@ -48,7 +48,7 @@ $light-background-color:rgb(242, 242, 242);
 *{
     box-sizing: border-box;
     font-family: "Raleway", Arial, Helvetica, sans-serif,cursive,'Times New Roman', Times, serif;
-    font-style: 100 1000;
+    font-weight: 100 1000;
     text-decoration: none;
     color: black;
     margin: 0px;
