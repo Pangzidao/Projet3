@@ -255,7 +255,7 @@ header{
                    &::after{
                     content:"";
                     width:35px;
-                    animation:1s fill ;
+                    animation:0.7s fill ;
                     position:absolute;
                     z-index:2;
                     background-color:white;   
@@ -274,7 +274,7 @@ header{
                 
                 .fa-regular{
                   z-index:3;
-                  transition:color 1s;
+                  transition:color 0.7s;
                 }   
             }
         }

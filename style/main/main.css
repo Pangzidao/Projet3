@@ -269,8 +269,8 @@ header img {
 #section-restaurants #zone-carte .carte .heart:hover::after {
   content: "";
   width: 35px;
-  -webkit-animation: 1s fill;
-          animation: 1s fill;
+  -webkit-animation: 0.7s fill;
+          animation: 0.7s fill;
   position: absolute;
   z-index: 2;
   background-color: white;
@@ -285,7 +285,7 @@ header img {
 }
 #section-restaurants #zone-carte .carte .heart .fa-regular {
   z-index: 3;
-  transition: color 1s;
+  transition: color 0.7s;
 }
 
 /*footer*/
