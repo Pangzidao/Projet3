@@ -38,15 +38,32 @@ $light-background-color:rgb(242, 242, 242);
 
 /*police*/
 @font-face {
-    font-family: "Raleway";
-    src: url("../Raleway-VariableFont_wght.ttf");
-    font-weight: 100 1000;
+    font-family: "Roboto";
+    src: url("../Roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight:500;
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url("../Roboto/Roboto-Medium.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../Roboto/Roboto-Light.ttf") format("truetype");
+    font-weight:lighter;
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../Shrikhand-Regular.ttf") format("truetype")
+
+}
 /*style universel*/
 *{
     box-sizing: border-box;
-    font-family: "Raleway", Arial, Helvetica, sans-serif,cursive,'Times New Roman', Times, serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
     margin: 0px;
@@ -102,10 +119,9 @@ header{
 
     /*nom du restaurant*/
     h1{
-        margin:30px 0px 50px 5%;
-        font-style: italic;
-        font-family:'Times New Roman', Times, serif;
-        font-weight: bolder;
+        margin:35px 0px 40px 5%;
+        font-family:"Shrikhand";
+        font-size:160%;
     }
 
     /*coeur animé*/
@@ -172,7 +188,7 @@ header{
             h2{
                 margin:0px 10px 20px 10px;
                 font-size: medium;
-                font-weight: 300;
+                font-weight: lighter;
                 display: flex;
                 flex-direction: column;
         
@@ -295,13 +311,13 @@ header{
 
     /*bouton "commander"*/
     button{
-        padding: 20px;
+        padding: 20px 40px 20px 40px;
         border: none;
         border-radius: 40px;
         width: fit-content;
         align-self: center;
         color: white;
-        font-weight: 500;
+        font-weight: bold;
         margin:20px 0px 60px 0px;
         background-image:linear-gradient($couleur-primaire,$couleur-secondaire);
         box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.21);
