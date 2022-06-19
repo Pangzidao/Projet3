@@ -10,8 +10,8 @@ $light-background-color:rgb(242, 242, 242);
 /*police*/
 @font-face {
     font-family: "Roboto";
-    src: url("../Roboto/Roboto-Regular.ttf") format("truetype");
-    font-weight:500;
+    src: url("../Roboto/Roboto-Light.ttf") format("truetype");
+    font-weight:400;
 }
 
 @font-face {
@@ -22,8 +22,8 @@ $light-background-color:rgb(242, 242, 242);
 
 @font-face {
     font-family: "Roboto";
-    src: url("../Roboto/Roboto-Light.ttf") format("truetype");
-    font-weight:lighter;
+    src: url("../Roboto/Roboto-Thin.ttf") format("truetype");
+    font-weight:200;
 }
 
 /*style universel*/
@@ -100,7 +100,7 @@ header{
     input{
         border: none;
         background-color: inherit;
-        font-weight: 500;
+        font-weight: 400;
         width:fit-content;
         margin:20px 0px 20px 10px;
     }
@@ -126,7 +126,8 @@ header{
     p{
         margin:10px 50px 20px 50px;
         text-align: center;
-        font-weight: lighter;
+        font-weight: 200;
+        font-size: large;
     }
     /*bouton "Explorer nos restaurants"*/
     button{
@@ -183,7 +184,7 @@ header{
         }
 
         .texte-etape{
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 }
@@ -227,7 +228,7 @@ header{
             .nouveau{
                 background-color: $couleur-tertiaire;
                 color:green;
-                font-weight: 500;
+                font-weight: 400;
                 position: absolute;
                 align-self: flex-end;
                 margin: 20px;

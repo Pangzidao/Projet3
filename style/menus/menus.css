@@ -35,8 +35,8 @@
 /*police*/
 @font-face {
   font-family: "Roboto";
-  src: url("../Roboto/Roboto-Regular.ttf") format("truetype");
-  font-weight: 500;
+  src: url("../Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
@@ -45,8 +45,8 @@
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../Roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: lighter;
+  src: url("../Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
 }
 @font-face {
   font-family: "Shrikhand";
@@ -184,7 +184,7 @@ header img {
 #menu #liste-plats .partie-du-repas h2 {
   margin: 0px 10px 20px 10px;
   font-size: medium;
-  font-weight: lighter;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }

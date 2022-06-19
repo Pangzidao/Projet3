@@ -4,8 +4,8 @@
 /*police*/
 @font-face {
   font-family: "Roboto";
-  src: url("../Roboto/Roboto-Regular.ttf") format("truetype");
-  font-weight: 500;
+  src: url("../Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
@@ -14,8 +14,8 @@
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../Roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: lighter;
+  src: url("../Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
 }
 /*style universel*/
 * {
@@ -114,7 +114,7 @@ header img {
 #section-de-localisation input {
   border: none;
   background-color: inherit;
-  font-weight: 500;
+  font-weight: 400;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -140,7 +140,8 @@ header img {
 #section-presentation p {
   margin: 10px 50px 20px 50px;
   text-align: center;
-  font-weight: lighter;
+  font-weight: 200;
+  font-size: large;
 }
 #section-presentation button {
   padding: 20px;
@@ -192,7 +193,7 @@ header img {
   margin-right: 15px;
 }
 #section-fonctionnement div .texte-etape {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /*section-restaurants*/
@@ -234,7 +235,7 @@ header img {
 #section-restaurants #zone-carte .carte .nouveau {
   background-color: #99E2D0;
   color: green;
-  font-weight: 500;
+  font-weight: 400;
   position: absolute;
   align-self: flex-end;
   margin: 20px;
